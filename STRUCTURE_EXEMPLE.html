@@ -1,0 +1,341 @@
+<!-- 
+    EXEMPLE DE STRUCTURE HTML GÉNÉRÉE
+    Ce fichier montre ce que WordPress affichera après implémentation
+-->
+
+<!-- ============================================================
+     PAGE D'ARCHIVE (Liste des appartements)
+     URL: /apartments/
+     ============================================================ -->
+
+<!-- HERO SECTION -->
+<section class="apartment-hero">
+    <div class="container">
+        <h1 class="apartment-hero-title">Appartements</h1>
+        <p class="apartment-hero-subtitle">Découvrez nos 15 appartements disponibles à Casablanca</p>
+    </div>
+</section>
+
+<!-- GRILLE D'APPARTEMENTS (3 colonnes desktop) -->
+<section class="apartment-archive">
+    <div class="container">
+        <div class="apartment-grid">
+            
+            <!-- CARTE APPARTEMENT 1 -->
+            <div class="apartment-card">
+                <div class="apartment-card-image">
+                    <img src="images/appartement-1.jpg" alt="Appartement 2Ch Anfa">
+                </div>
+                <div class="apartment-card-content">
+                    <h2 class="apartment-card-title">
+                        <a href="/apartments/appartement-2ch-anfa/">Appartement 2Ch Anfa</a>
+                    </h2>
+                    <div class="apartment-card-location">
+                        <span class="location-icon">📍</span>
+                        Centre-ville, Casablanca
+                    </div>
+                    <div class="apartment-card-rating">
+                        <span class="rating-stars">★</span>
+                        <span class="rating-value">4.8</span>
+                        <span class="reviews-count">(42 avis)</span>
+                    </div>
+                    <div class="apartment-card-price">
+                        <span class="price-amount">450 DH</span>
+                        <span class="price-period">par nuit</span>
+                    </div>
+                    <a href="/apartments/appartement-2ch-anfa/" class="apartment-card-button">
+                        Voir le logement →
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARTE APPARTEMENT 2 -->
+            <div class="apartment-card">
+                <!-- ... même structure ... -->
+            </div>
+
+            <!-- ... autres cartes ... -->
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE DÉTAILS (Single Apartment)
+     URL: /apartments/appartement-2ch-anfa/
+     ============================================================ -->
+
+<!-- BREADCRUMB -->
+<div class="apartment-breadcrumb">
+    <div class="container">
+        <a href="/apartments/">Appartements</a>
+        <span> / </span>
+        <span>Appartement 2Ch Anfa</span>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL: 2 COLONNES -->
+<div class="container apartment-container">
+
+    <!-- COLONNE GAUCHE: Détails -->
+    <div class="apartment-content">
+
+        <!-- Image en grand -->
+        <div class="apartment-featured-image">
+            <img src="images/appartement-1.jpg" alt="Appartement 2Ch Anfa">
+        </div>
+
+        <!-- Titre -->
+        <h1 class="apartment-single-title">Appartement 2Ch Anfa</h1>
+
+        <!-- Infos rapides -->
+        <div class="apartment-single-meta">
+            <div class="apartment-meta-item">
+                <span class="meta-icon">📍</span>
+                Centre-ville, Casablanca
+            </div>
+            <div class="apartment-meta-item">
+                <span class="meta-icon">👥</span>
+                4 personnes max
+            </div>
+        </div>
+
+        <!-- Équipements -->
+        <div class="apartment-amenities">
+            <div class="amenity">
+                <span class="amenity-icon">🛏️</span>
+                <div>
+                    <strong>2</strong>
+                    <p>chambre(s)</p>
+                </div>
+            </div>
+            <div class="amenity">
+                <span class="amenity-icon">🛌</span>
+                <div>
+                    <strong>2</strong>
+                    <p>lit(s)</p>
+                </div>
+            </div>
+            <div class="amenity">
+                <span class="amenity-icon">🚿</span>
+                <div>
+                    <strong>1,5</strong>
+                    <p>salle(s) de bain</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Évaluation -->
+        <div class="apartment-rating-large">
+            <div class="rating-header">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-number">4.8/5</span>
+            </div>
+            <p class="rating-reviews">Basé sur 42 avis</p>
+        </div>
+
+        <!-- Description -->
+        <div class="apartment-description">
+            <h2>À propos du logement</h2>
+            <p>Cet appartement spacieux situé au cœur de Casablanca offre un confort moderne...</p>
+            <p>[Contenu de l'éditeur WordPress]</p>
+        </div>
+
+    </div>
+
+    <!-- COLONNE DROITE: Booking Card (Sticky) -->
+    <aside class="apartment-booking-sidebar">
+        <div class="booking-card">
+
+            <!-- Prix -->
+            <div class="booking-price">
+                <span class="price-amount">450 DH</span>
+                <span class="price-period">par nuit</span>
+            </div>
+
+            <!-- Date d'arrivée -->
+            <div class="booking-field">
+                <label for="checkin-date">Arrivée</label>
+                <input type="date" id="checkin-date" class="booking-input" data-field="checkin">
+            </div>
+
+            <!-- Date de départ -->
+            <div class="booking-field">
+                <label for="checkout-date">Départ</label>
+                <input type="date" id="checkout-date" class="booking-input" data-field="checkout">
+            </div>
+
+            <!-- Nombre de personnes -->
+            <div class="booking-field">
+                <label for="guests-count">Personnes</label>
+                <input type="number" id="guests-count" class="booking-input" min="1" value="1" data-field="guests">
+            </div>
+
+            <!-- Calcul du prix (remplissage automatique par JS) -->
+            <div class="booking-calculation">
+                <div class="calculation-row">
+                    <span class="label">Nuits:</span>
+                    <span class="value" id="nights-count">0</span>
+                </div>
+                <div class="calculation-row">
+                    <span class="label">Prix par nuit:</span>
+                    <span class="value">450 DH</span>
+                </div>
+                <div class="calculation-total">
+                    <span class="label">Total:</span>
+                    <span class="value" id="total-price">0 DH</span>
+                </div>
+            </div>
+
+            <!-- Bouton de réservation -->
+            <button class="booking-button" id="booking-button">
+                Réserver maintenant
+            </button>
+
+            <!-- Disclaimer -->
+            <p class="booking-disclaimer">
+                Vous serez redirigé vers notre plateforme de réservation.
+            </p>
+
+        </div>
+    </aside>
+
+</div>
+
+
+<!-- ============================================================
+     FLOT DE DONNÉES / FLOW
+     ============================================================ -->
+
+UTILISATEUR AJOUTE UN APPARTEMENT EN ADMIN:
+    ↓
+    functions.php → save_apartment_meta_fields()
+    ↓
+    Base de données WordPress:
+    {
+        post_title: "Appartement 2Ch Anfa",
+        post_content: "[description complète de l'editeur]",
+        post_type: "apartment",
+        meta: {
+            _location: "Centre-ville, Casablanca",
+            _price_per_night: 450,
+            _rating: 4.8,
+            _reviews_count: 42,
+            _guests: 4,
+            _bedrooms: 2,
+            _beds: 2,
+            _baths: 1.5,
+            _airbnb_url: "https://..."
+        }
+    }
+    ↓
+    WordPress affiche:
+    - Page d'archive (archive-apartment.php) avec cards
+    - Page détails (single-apartment.php) avec booking
+
+
+<!-- ============================================================
+     INTERACTION UTILISATEUR: BOOKING
+     ============================================================ -->
+
+UTILISATEUR CLIQUE SUR "Voir le logement":
+    ↓
+    Charge single-apartment.php
+    ↓
+    Affiche formulaire de réservation
+
+UTILISATEUR SÉLECTIONNE DATES:
+    ↓
+    apartment-booking.js → calculatePrice()
+    ↓
+    Nuits = différence en jours
+    Total = Nuits × Prix par nuit
+    ↓
+    Affiche total en temps réel
+
+UTILISATEUR CLIQUE "Réserver maintenant":
+    ↓
+    Validation des dates
+    ↓
+    window.open(airbnb_url, '_blank')
+    ↓
+    Redirect vers URL externe (nouvelle fenêtre)
+
+
+<!-- ============================================================
+     DESIGN GRAPHIQUE
+     ============================================================ -->
+
+ARCHIVE PAGE:
+┌─────────────────────────────────────────┐
+│  APPARPARTEMENTS                        │
+│  Découvrez nos 15 appartements...  │
+└─────────────────────────────────────────┘
+
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│   [IMAGE]    │ │   [IMAGE]    │ │   [IMAGE]    │
+├──────────────┤ ├──────────────┤ ├──────────────┤
+│ Appartement1 │ │ Appartement2 │ │ Appartement3 │
+│ 📍 Localiz.. │ │ 📍 Localiz.. │ │ 📍 Localiz.. │
+│ ★ 4.8(42)   │ │ ★ 4.8(42)   │ │ ★ 4.8(42)   │
+│ 450 DH/nuit  │ │ 450 DH/nuit  │ │ 450 DH/nuit  │
+│ [VOIR]      │ │ [VOIR]      │ │ [VOIR]      │
+└──────────────┘ └──────────────┘ └──────────────┘
+
+
+SINGLE PAGE (Desktop):
+┌────────────────────────────────────────────────────────────┐
+│ Appartements / Titre                                       │
+├────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌──────────────────────────────┐  ┌─────────────────┐    │
+│  │                              │  │  450 DH         │    │
+│  │                              │  │  par nuit       │    │
+│  │         [GRANDE IMAGE]       │  │ ┌───────────┐  │    │
+│  │                              │  │ │Arrivée:   │  │    │
+│  │                              │  │ │[DATE]     │  │    │
+│  └──────────────────────────────┘  │ │Départ: [DATE]│  │    │
+│                                    │ │Personnes:[N]│  │    │
+│  Titre Appartement                 │ │Nuits: 2    │  │    │
+│  📍 Location                       │ │Total: 900 DH  │  │    │
+│  👥 4 personnes                    │ │[RÉSERVER]  │  │    │
+│                                    │ └─────────────┘  │    │
+│  🛏️ 2CH  🛌 2LITs  🚿 1.5SDB     │                 │    │
+│                                    │ (STICKY au       │    │
+│  ★ 4.8/5 (42 avis)                │  scroll)         │    │
+│                                    │                 │    │
+│  À propos du logement              └─────────────────┘    │
+│  [Description détaillée...]                               │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+
+SINGLE PAGE (Mobile):
+┌──────────────────────────┐
+│ Appartements / Titre     │
+├──────────────────────────┤
+│                          │
+│  [GRANDE IMAGE]          │
+│                          │
+│  Titre                   │
+│  📍 Localiz              │
+│                          │
+│  🛏️ 2CH                 │
+│  🛌 2LITs               │
+│  🚿 1.5SDB              │
+│                          │
+│  ★ 4.8/5 (42 avis)      │
+│                          │
+│  À propos:               │
+│  [description...]        │
+│                          │
+├──────────────────────────┤
+│  450 DH / nuit           │
+│  Arrivée: [DATE]         │
+│  Départ: [DATE]          │
+│  Personnes: [N]          │
+│  Nuits: 2                │
+│  TOTAL: 900 DH           │
+│  [RÉSERVER]              │
+└──────────────────────────┘
